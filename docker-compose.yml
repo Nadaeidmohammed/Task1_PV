@@ -1,0 +1,12 @@
+version: '2'
+
+services:
+  node-app:
+    build: .
+    container_name: node-cont
+    ports:
+      - 4000:3000
+    environment:
+      - ./src/config/.env
+    volumes:
+      - ./src:/app/src:ro
